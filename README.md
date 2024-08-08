@@ -62,3 +62,25 @@ if (value.noNegZero() == 0) {
 value = 3.14;
 console.log(value.noNegZero()); // Outputs: 3.14
 ```
+
+
+## `unique` Method
+
+The `unique` method is an extension of the JavaScript `Array` prototype that returns a new array containing only the unique elements from the original array. This method ensures that duplicate elements are removed, preserving the first occurrence of each element.
+
+### Functionality
+
+The `unique` method operates on an array and uses the `reduce` function to iterate through the array, building an object that maps unique string representations of elements to the elements themselves. Finally, it converts this object back into an array of unique elements.
+
+### Example Usage
+
+```javascript
+// Direct usage on an array
+var array = [1, 2, 2, 3, 4, 4, 5];
+var uniqueArray = array.unique();
+console.log(uniqueArray); // Outputs: [1, 2, 3, 4, 5]
+
+var mixedArray = [1, '1', 2, '2', 2, '2', 3, '3'];
+var uniqueMixedArray = mixedArray.unique();
+console.log(uniqueMixedArray); // Outputs: [1, '1', 2, '2', 3, '3']
+```
