@@ -24,3 +24,8 @@ The `_getRegionSetting` function returns an object with the following properties
   listSeperator: ",",
   negativeSymbol: "-"
 }
+
+### Example Usage
+```javascript
+const regionSettings = _getRegionSetting();
+console.log(regionSettings.currencySymbol);  // Example output: "$"
